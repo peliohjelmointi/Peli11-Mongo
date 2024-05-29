@@ -11,7 +11,7 @@ public class ListCollectionNames : MonoBehaviour
 
     void Awake()
     {
-        conn = new Connection("scoreDB", "scoreCollection");      
+        conn = new Connection("sample_mflix", "movies");      
     }
 
 

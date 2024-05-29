@@ -6,17 +6,17 @@ using System;
 
 public class Connection
 {
-    MongoClient mongoClient = new MongoClient("mongodb+srv://USER:PASSWORD@cluster0.37ex2rd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+    MongoClient mongoClient = new MongoClient("mongodb+srv://testaaja:testaaja@cluster0.37ex2rd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 
     public IMongoDatabase db;
-    IMongoCollection<BsonDocument> collection;
+    public IMongoCollection<BsonDocument> collection;
 
     //konstruktori
     public Connection(string dbName, string dbCollection)
     {
         db = mongoClient.GetDatabase(dbName); //asetetaan muuttujaan parametrina saatu tietokannan nimi
         collection = db.GetCollection<BsonDocument>(dbCollection);
-        Debug.Log($"Connection-olio luotiin tietokannalle {dbName}, collectionille {dbCollection}");
+        //Debug.Log($"Connection-olio luotiin tietokannalle {dbName}, collectionille {dbCollection}");
 
         try
         {
