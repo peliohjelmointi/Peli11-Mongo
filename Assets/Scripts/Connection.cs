@@ -6,7 +6,7 @@ using System;
 
 public class Connection
 {
-    MongoClient mongoClient = new MongoClient("mongodb+srv://testaaja:testaaja@cluster0.37ex2rd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
+    MongoClient mongoClient = new MongoClient("mongodb+srv://testaaja:testi@cluster0.37ex2rd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 
     public IMongoDatabase db;
     public IMongoCollection<BsonDocument> collection;
